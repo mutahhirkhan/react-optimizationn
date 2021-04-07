@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
+import UseRef from "./UseRef";
 
 var Fns = new Set();
 
@@ -66,6 +67,7 @@ function App() {
         {toggleHeader && <Header content="I'm Header" />}
         <h1>Heavy Calculation <br/> {heavyCalculation}</h1>
       </header>
+      <UseRef/>
     </div>
   );
 }

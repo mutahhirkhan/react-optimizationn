@@ -1,7 +1,7 @@
 import React, {memo} from 'react'
 
 const Header = ({content}) => {
-    console.log("i'm also rendering plz save me")
+    console.log("i'm Header also rendering plz save me")
     return (
         <h1>
             {content}

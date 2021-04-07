@@ -1,0 +1,14 @@
+.use-ref{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+#phone{
+    padding: 1em;
+    border-bottom: 2px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+    border: 0;
+}
