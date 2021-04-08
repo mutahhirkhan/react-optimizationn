@@ -1,15 +1,18 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useContext } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
 import UseRef from "./UseRef";
+import { ThemeContext } from './ThemeContext/ThemeContext';
 
 var Fns = new Set();
 
 function App() {
+  // var {themeState, themeActions} = useContext(ThemeContext); //ye as a connect function kaam krrha he 
   var [counter1, setCounter1] = useState(1);
   var [counter2, setCounter2] = useState(1);
   var [toggleHeader, setToggleHeader] = useState(false);
+  // console.log(themeState)
   
   /* 
   both these functions re-allocated on the change of any of them,
