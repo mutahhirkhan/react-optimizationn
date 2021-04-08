@@ -6,11 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import ThemeProvider from "./ThemeContext/ThemeContext";
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <ThemeProvider>
-    <App />,
-  </ThemeProvider>,
-  // </React.StrictMode>,
+  <React.StrictMode>
+    {/* <ThemeProvider> */}
+      <App />,
+    {/* </ThemeProvider> */}
+    ,
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

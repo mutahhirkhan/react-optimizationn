@@ -50,6 +50,7 @@ function App() {
     }, [counter2, counter1])
   }
   return (
+
     <div className="App">
       <header className="App-header">
         <button onClick={incOne} className="buttons">

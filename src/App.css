@@ -1,10 +1,12 @@
-body{
+/* body{
   background-color: #282c34;
-}
+} 
+*/
 .App {
   height: 100vh;
   display: grid;
   grid-template-columns: 70fr 30fr;
+  background-color: lightcoral;
   font-size: 62.5%;
 }
 
