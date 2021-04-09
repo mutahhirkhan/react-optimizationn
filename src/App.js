@@ -8,11 +8,11 @@ import { ThemeContext } from './ThemeContext/ThemeContext';
 var Fns = new Set();
 
 function App() {
-  // var {themeState, themeActions} = useContext(ThemeContext); //ye as a connect function kaam krrha he 
+  var {themeState, themeActions} = useContext(ThemeContext); //ye as a connect function kaam krrha he 
   var [counter1, setCounter1] = useState(1);
   var [counter2, setCounter2] = useState(1);
   var [toggleHeader, setToggleHeader] = useState(false);
-  // console.log(themeState)
+  console.log(themeActions)
   
   /* 
   both these functions re-allocated on the change of any of them,
@@ -21,8 +21,8 @@ function App() {
   */
   //  W I T H O U T   C A L L B A C K 
   { 
-    /*
     //initially -> count1(address: 101) |  onChange -> count1(102)
+    /*
     var incOne = () => setCounter1(counter1 + 1);
     
     //initially -> count2(address: 201) |  onChange -> count2(202)
@@ -52,8 +52,8 @@ function App() {
   return (
 
     <div className="App">
-      <header className="App-header">
-        <button onClick={incOne} className="buttons">
+      <header className="App-header" style={{background: themeState.background, color: themeState.color}}>
+        {/* <button onClick={incOne} className="buttons"> 
           + counter1
         </button>
         <h1>{counter1}</h1>
@@ -69,9 +69,12 @@ function App() {
           Toggle Header
         </button>
         {toggleHeader && <Header content="I'm Header" />}
-        <h1>Heavy Calculation <br/> {heavyCalculation}</h1>
+        <h1>Heavy Calculation <br/> {heavyCalculation}</h1> */}
+      <button onClick={themeActions.setLightTheme}>SET LIGHT THEME</button>
+      <button onClick={themeActions.setDarkTheme}>SET DARK THEME</button>
+      <button onClick={() => themeActions.setCustomTheme({ background: "#a3b0d1", color:"#e9ebf0" })}>SET CUSTOM THEME</button>
+      {/* <UseRef/> */}
       </header>
-      <UseRef/>
     </div>
   );
 }

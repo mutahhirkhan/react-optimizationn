@@ -15,6 +15,7 @@ const ThemeProvider = ({ Children }) => {
       dispatch({ type: CUSTOM_THEME, payload: { theme } }),
   };
   return (
+    //   ye as a provider kaam krrha he 
     <ThemeContext.Provider value={{ themeState, themeActions: actions }}>
       {Children}
     </ThemeContext.Provider>
